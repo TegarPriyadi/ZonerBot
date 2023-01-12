@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>from nilai</title>
+</head>
+<body>
+<div class="container">
+	<form class="form">
+
+	<div class="nilai">
+			 <label>Nilai Ujian 1</label>
+			<input type="number"  id="nilaiBisnis"></div>
+
+	<div class="nilai">
+			<label>Nilai Ujian 2</label>
+			<input type="number"  id="nilaiAkuntansi"></div>
+
+	 <div class="nilai">
+		 <label>Nilai Ujian 3</label>
+		  <input type="number" id="nilaiMikro"></div>
+				 
+				 <input type="submit" value="Submit"  id="cek">
+		</form>	
+		
+			<div class="form-control"><input type="text"  id="demo" disabled></div>
+			
+	</div>
+<script>
+	// Tulis disini
+	var buttonCek = document.getElementById("cek");
+	buttonCek.addEventListener("click", function cek(e){
+		e.preventDefault()
+		var nilaiBisnis =  document.getElementById("nilaiBisnis").value
+		var nilaiAkuntansi =  document.getElementById("nilaiAkuntansi").value
+		var nilaiMikro =  document.getElementById("nilaiMikro").value
+		
+		var ipSemester = [nilaiBisnis, nilaiAkuntansi, nilaiMikro]
+		console.log(ipSemester)
+ 
+		var total = 0;
+		for(var i = 0; i<ipSemester.length; i++){
+			total += parseFloat(ipSemester[i])
+			var hasil = total / ipSemester.length;
+		}
+		document.getElementById("demo").value = hasil.toFixed(2)
+		console.log("IP, Kumulatif "+ hasil.toFixed(2))
+ 
+	})
+</script>
+
+</body>
+</html>
