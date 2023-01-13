@@ -30,6 +30,8 @@ return`
  ${no++} ➳ ${prefix}infobot
  ${no++} ➳ ${prefix}donasi
  ${no++} ➳ ${prefix}donate
+ ${no++} ➳ ${prefix}jadibot
+ ${no++} ➳ ${prefix}listjadibot
  ${no++} ➳ ${prefix}sewabot
  ${no++} ➳ ${prefix}groupbot
  ${no++} ➳ ${prefix}ownerinfo
